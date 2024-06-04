@@ -13,11 +13,9 @@ model_path = 'E:/classroomProject/classroom_detection.h5'
 model = load_model(model_path)
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
-# Image size parameter
 image_size = (128, 128)
 
-# Define class labels (update with your actual class labels)
-class_labels = ['Not in classroom', 'You are present in classroom']  # Update this with your actual class labels
+class_labels = ['Not in classroom', 'You are present in classroom']  
 
 def load_and_preprocess_image(img_path):
     img = cv2.imread(img_path)
